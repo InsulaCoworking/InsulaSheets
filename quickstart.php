@@ -3,6 +3,7 @@ require_once __DIR__ . '/vendor/autoload.php';
 
 
 define('APPLICATION_NAME', 'Google Sheets API PHP Quickstart');
+define('DATA_SHEET','1cI-UMa7dePca6qpfqh7Tr2fq120dbwP5imCZIjMivrM');
 define('CREDENTIALS_PATH', '.credentials/sheets.googleapis.com-php-quickstart.json');
 define('CLIENT_SECRET_PATH', __DIR__ . '/client_secret.json');
 // If modifying these scopes, delete your previously saved credentials
@@ -76,9 +77,8 @@ $service = new Google_Service_Sheets($client);
 
 // Prints the names and majors of students in a sample spreadsheet:
 // https://docs.google.com/spreadsheets/d/1BxiMVs0XRA5nFMdKvBdBZjgmUUqptlbs74OgvE2upms/edit
-$spreadsheetId = '1cI-UMa7dePca6qpfqh7Tr2fq120dbwP5imCZIjMivrM';
 $range = 'A1:Z';
-$response = $service->spreadsheets_values->get($spreadsheetId, $range);
+$response = $service->spreadsheets_values->get(DATA_SHEET, $range);
 $values = $response->getValues();
 
 $m = new Mustache_Engine(array(
