@@ -1,0 +1,6 @@
+/vendor
+/.credentials
+client_secret.json
+composer.lock
+composer.phar
+/.dropbox
