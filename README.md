@@ -31,7 +31,8 @@ Pasos:
 5. Opcionalmente podemos modificar el rango de las celdas que necesitamos dentro de los archivos `lista.php` y `ficha.php`
 6. Ejecutamos por consola: `php lista.php`
 7. Nos pedirá dar permisos con una cuenta de google. Copiamos la url que nos muestra y la pegamos en un navegador. Damos permisos a la cuenta de Google con la que creamos la hoja (o alguna con permisos). Ahora copiamos el código devuelto y lo velvemos a pegar en la consola. Esto nos generará una automáticamente un fichero en la carpeta `.credentials`. **Mucho cuidado de no hacer público ese fichero, ya que con él se podrá acceder a tus hojas de cálculo**.
-8. Ahora solo queda poner bonita nuestra plantilla. Para ellos modificamos los ficheros `.mustache` dentro de la carpeta [views](views) según el formato de [Mustache](https://mustache.github.io/). Tenemos en cuenta que los nombres de la cabecera de nuestra hoja de cáculo se corresponden con los nombres de etiquetas de la plantilla Mustache.
+8. Abrimos los ficheros `lista.php` y `ficha.php` y mapeamos los valores de las columnas de la hoja de cáculo, dándoles un nombre que luego usaremos en la plantilla Mustache (mirar comentario).
+9. ¡Ahora solo queda poner bonita nuestra plantilla! Para ellos modificamos los ficheros `.mustache` dentro de la carpeta [views](views) según el formato de [Mustache](https://mustache.github.io/). Tenemos en cuenta que los nombres de los campos que acabamos de mapear en los ficheros `.php` tienen que coincidir con los nombres de etiquetas de la plantilla Mustache.
 
 ### ¡Y con esto ya tenemos listo nuestro sistema para generar contenidos web a traves de Google Sheets!
 
